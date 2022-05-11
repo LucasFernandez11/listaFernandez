@@ -1,0 +1,28 @@
+h1 {
+    color: #484848;
+    font-size: 48px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    
+}
+h1 span {
+    transition: .8s linear;
+}
+h1:hover span:nth-child(1){
+    margin-right: 5px;
+}  
+h1:hover span:nth-child(2){
+    margin-right: 5px;
+}  
+h1:hover span:nth-child(1):after{
+    content: "ist";
+}
+h1:hover span:nth-child(2):after{
+    content: "tudents";
+}
+.aprobado{
+color: green;
+}
+.desaprobado{
+color: red;
+}
