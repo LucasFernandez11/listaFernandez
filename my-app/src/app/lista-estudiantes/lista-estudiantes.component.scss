@@ -2,8 +2,7 @@ h1 {
     color: #484848;
     font-size: 48px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: bold;
-    
+    font-weight: bold;    
 }
 h1 span {
     transition: .8s linear;
@@ -12,13 +11,20 @@ h1:hover span:nth-child(1){
     margin-right: 5px;
 }  
 h1:hover span:nth-child(2){
-    margin-right: 5px;
+    margin-right: 30px;
 }  
 h1:hover span:nth-child(1):after{
-    content: "ist";
+    content: "i";
 }
 h1:hover span:nth-child(2):after{
-    content: "tudents";
+    content: "udents";
+}
+h1:hover span {
+    color: #fff;
+    text-shadow: 
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #fff;
 }
 .aprobado{
 color: green;

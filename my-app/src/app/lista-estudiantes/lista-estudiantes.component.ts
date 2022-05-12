@@ -6,7 +6,7 @@ import { Component, OnInit, SelfDecorator } from '@angular/core';
   styleUrls: ['./lista-estudiantes.component.scss']
 })
 export class ListaEstudiantesComponent implements OnInit {
-  recibido:boolean = false;
+  recibido:boolean = true;
   trabaja:boolean = false;
   
   estudiantes=[
@@ -76,9 +76,16 @@ export class ListaEstudiantesComponent implements OnInit {
     }
   ]
 
-  constructor() { }
+  constructor() { 
+    
+  }
 
   ngOnInit(): void {
+  }
+  recibir(nota:number): void{
+    if(nota>=4){
+      this.recibido = true;
+    }else{this.recibido = false;}
   }
 
 }
