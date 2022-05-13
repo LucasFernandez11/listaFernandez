@@ -84,7 +84,7 @@ export class ListaEstudiantesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-   
+   this.div1=false;
   }
   div1Function(){
     this.div1=true;   
