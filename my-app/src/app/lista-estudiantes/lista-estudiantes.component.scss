@@ -27,8 +27,26 @@ h1:hover span {
     0 0 40px #fff;
 }
 .aprobado{
-color: green;
+color: rgb(25, 175, 25);
+
+}
+.aprobado:hover {
+    cursor: default;
+    
+    color: rgb(25, 175, 25);
+    text-shadow: 
+    0 0 10px rgb(25, 175, 25),
+    0 0 20px rgb(25, 175, 25),
+    0 0 40px rgb(25, 175, 25);
 }
 .desaprobado{
 color: red;
+}
+.desaprobado:hover {
+    cursor: default;
+    color: red;
+    text-shadow: 
+    0 0 10px red,
+    0 0 20px red,
+    0 0 40px red;
 }

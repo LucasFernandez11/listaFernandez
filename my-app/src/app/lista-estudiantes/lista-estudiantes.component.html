@@ -2,18 +2,29 @@
     <h1>
         <span>L</span>S<span>T</span>          
     </h1>
-
 </div>
-    <div class="d-flex justify-content-center align-items-center flex-column mt-5">
+
+<div class="d-flex justify-content-center align-items-center flex-column mt-5">
+    <div *ngFor="let estudiante of estudiantes">
+        <div>        
+           <h2 [ngClass]="estudiante.recibido ? 'aprobado': 'desaprobado'" >{{estudiante.nombre | uppercase}} nota: {{estudiante.nota}} curso: {{estudiante.curso}} </h2>                
+        </div>
+    </div>  
+
+    <h2 class="text-decoration-underline">Los que consiguieron trabajo</h2>  <button class="btn btn-light btn-sm" (click)="div1Function()" (dblclick)="div2Function()">Ver</button> 
+   
+    
+    <div *ngIf="div1" class="d-flex justify-content-center align-items-center flex-column mt-3">
         <div *ngFor="let estudiante of estudiantes">
-            <div *ngIf="estudiante.nota>=5" [ngClass]="recibido? 'aprobado': 'desaprobado'">        
-               <h2 >{{estudiante.nombre}} nota: {{estudiante.nota}} curso:{{estudiante.curso}}</h2>
+            <div *ngIf="estudiante.trabaja">        
+                <h3  >{{estudiante.nombre}} como desarrollador de {{estudiante.curso}} </h3>                
             </div>
-            <div *ngIf="estudiante.nota<5" [ngClass]="recibido? 'desaprobado': 'aprobado'">
-                <h2>{{estudiante.nombre}} nota:{{estudiante.nota}} curso: {{estudiante.curso}}</h2>
-            </div>
-         </div>
-         
+        </div>  
+        
+        <button class="btn btn-light btn-sm" *ngIf="div1" (click)="div2Function()">Ocultar</button>
     </div>
+    
+    
+</div>
 
 
